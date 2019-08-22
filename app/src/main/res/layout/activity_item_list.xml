@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/item_list"
+        android:name="news.agoda.com.sample.ui.ItemListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layoutManager="LinearLayoutManager"
+        tools:context="news.agoda.com.sample.ui.view.NewsListActivity"
+        tools:listitem="@layout/item_list_content" />
+    <LinearLayout
+        android:id="@+id/ll_pb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/bg_transparent">
+        <ProgressBar
+            android:layout_width="@dimen/progressbar_diameter"
+            android:layout_height="@dimen/progressbar_diameter"
+            android:indeterminate="true"/>
+    </LinearLayout>
+</FrameLayout>
